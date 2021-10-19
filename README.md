@@ -29,6 +29,12 @@ git clone https://github.com/Ugtakh/wishlist.git
 cd into wishlist_backend, and
 
 ```
+yarn install or npm install
+```
+
+next
+
+```
 yarn or npm run develop
 ```
 
