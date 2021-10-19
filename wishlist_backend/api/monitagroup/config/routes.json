@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/monitagroups",
+      "handler": "monitagroup.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/monitagroups/count",
+      "handler": "monitagroup.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/monitagroups/:id",
+      "handler": "monitagroup.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/monitagroups",
+      "handler": "monitagroup.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/monitagroups/:id",
+      "handler": "monitagroup.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/monitagroups/:id",
+      "handler": "monitagroup.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

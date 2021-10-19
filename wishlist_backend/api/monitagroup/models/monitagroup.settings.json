@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "monitagroups",
+  "info": {
+    "name": "monitagroup",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "endOfDate": {
+      "type": "datetime"
+    },
+    "createdUser": {
+      "model": "myuser",
+      "via": "monitagroup"
+    },
+    "myusers": {
+      "collection": "myuser",
+      "via": "monitagroups"
+    }
+  }
+}
