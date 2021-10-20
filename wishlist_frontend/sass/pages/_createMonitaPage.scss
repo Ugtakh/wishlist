@@ -1,5 +1,4 @@
 /* Create Monita Page start */
-
 .create-monita{
     margin-left: 250px;
     margin-right: 100px;
@@ -25,4 +24,14 @@
         margin-top: 20px;
 
     }
+}
+
+.phase{
+    &__name{
+
+    }
+    &__date{
+        background-color: aqua;
+    }
+
 }

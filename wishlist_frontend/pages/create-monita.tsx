@@ -15,6 +15,34 @@ const Header = ({imgUrl}:IHeader)=>{
             <div className="create-monita__name">Монатны нэр</div>
         </div>
     )
+}
+const Phase = () =>{
+return (
+    <div className="phase">
+        <div className="phase__name">
+
+        </div>
+        <div className="phase__date">
+
+        </div>
+
+    </div>
+);
+}
+
+
+const Member = () =>{
+    return (
+        <div className="member">
+            <div className="member__img">
+    
+            </div>
+            <div className="member__name">
+    
+            </div>
+    
+        </div>
+    );
     }
 
 const CreateMonitaGroup :NextPage= () =>{
@@ -48,8 +76,27 @@ const CreateMonitaGroup :NextPage= () =>{
         required
       />
         </div>
-        <div>
+        <div className="create-monita__date">
    
+        </div>
+        <div className="create-monita__phase">
+        <div className="create-monita__phase-name">
+        <p>Үе шат оруулах</p>
+        </div>
+        <div className="create-monita__phase-input">
+
+        </div>
+
+        </div>
+        <div className="create-monita__entered-phase">
+           
+
+        </div>
+        <div className="member">
+            <div className="member">
+
+            </div>
+
         </div>
        
         </>
