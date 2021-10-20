@@ -1,0 +1,28 @@
+/* Create Monita Page start */
+
+.create-monita{
+    margin-left: 250px;
+    margin-right: 100px;
+    background-color: $color-btn-pink;
+
+    &__header{
+        
+        &__cover{
+            border: 1px solid $color-frame;
+            max-width: 100%;
+            max-height: 50%;
+             img {
+                    width: 100%;
+                    max-height: 50px;
+                    object-fit: contain;
+                    overflow: hidden;
+                
+             }
+        }
+    }
+    
+    &__name{
+        margin-top: 20px;
+
+    }
+}
