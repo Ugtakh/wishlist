@@ -16,7 +16,6 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <h1 className={styles.title}>WishList Web Application - 2</h1>
       </main>
-
       <footer className={styles.footer}>Powered by Wish Team</footer>
     </div>
   );
