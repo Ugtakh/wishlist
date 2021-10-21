@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import GroupUserCard from "../components/group-user-card";
 import image from "./profile.jpeg";
 
-const DATA = [
+const GroupUsers = [
   {
     name: "Maral",
     imageUrl:
@@ -32,6 +32,12 @@ const DATA = [
   },
 ];
 
+const Match = {
+  name: "Gereltuya",
+  imageUrl:
+    "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+  active: true,
+};
 const monitaGroup = () => {
   return (
     <div className="container">
@@ -72,6 +78,11 @@ const monitaGroup = () => {
         </p>
       </div>
 
+      {/* match */}
+      <div className="my-match" style={{ display: "flex" }}>
+        <GroupUserCard props={Match} />
+      </div>
+
       {/* group user lists */}
       <div
         className="group-user-list"
@@ -82,7 +93,7 @@ const monitaGroup = () => {
         }}
       >
         {/* user card */}
-        {DATA.map((user, index) => {
+        {GroupUsers.map((user, index) => {
           return <GroupUserCard props={user} key={index} />;
         })}
         {/* user card end */}
