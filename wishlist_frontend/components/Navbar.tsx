@@ -7,9 +7,6 @@ import {
   faBars,
   faPlus,
 } from "@fortawesome/free-solid-svg-icons";
-import monitaGroup from "./monita-groups";
-import { Navigation } from "react-minimal-side-navigation";
-import type { NextPage } from "next";
 import Link from "next/link";
 
 const sideBarData = [
@@ -45,12 +42,21 @@ const NavBar = () => {
             background: "rgb(255, 249, 249)",
           }}
         >
-          <FontAwesomeIcon
-            icon={faTimes}
-            color="black"
-            onClick={showSidebar}
-            style={{ fontSize: "1.5em" }}
-          />
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "flex-end",
+              padding: "10px",
+            }}
+          >
+            <FontAwesomeIcon
+              icon={faTimes}
+              color="black"
+              onClick={showSidebar}
+              style={{ fontSize: "1.5em" }}
+            />
+          </div>
+
           <div
             className="nav-profile"
             style={{
