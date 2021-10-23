@@ -36,67 +36,6 @@ const Home = () => {
 
   return (
     <div className="home-container" style={{ display: "flex" }}>
-      {sidebar ? (
-        <div
-          className="nav-bar"
-          style={{
-            width: "60%",
-            height: "100vh",
-            background: "rgb(255, 249, 249)",
-          }}
-        >
-          <FontAwesomeIcon
-            icon={faTimes}
-            color="black"
-            onClick={showSidebar}
-            style={{ fontSize: "1.5em" }}
-          />
-          <div
-            className="nav-profile"
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <div
-              className="user-card-avatar"
-              style={{
-                backgroundImage: `url("https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")`,
-                width: "50px",
-                height: "50px",
-                borderRadius: "25px",
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-              }}
-            />
-            <p>User name </p>
-          </div>
-          {sideBarData.map((item, index) => {
-            return (
-              <li key={index} style={{ display: "flex" }} onClick={showSidebar}>
-                <FontAwesomeIcon
-                  icon={item.icon}
-                  color="black"
-                  style={{ fontSize: "1em", alignSelf: "center" }}
-                />
-                <Link href={item.path}>
-                  <p style={{ fontSize: "1em" }}>{item.title}</p>
-                </Link>
-              </li>
-            );
-          })}
-        </div>
-      ) : (
-        <FontAwesomeIcon
-          icon={faBars}
-          color="black"
-          onClick={showSidebar}
-          style={{ fontSize: "1.5em" }}
-        />
-      )}
-
       <div style={{ width: "100%" }} onClick={showSidebar}>
         <p>home page</p>
       </div>
