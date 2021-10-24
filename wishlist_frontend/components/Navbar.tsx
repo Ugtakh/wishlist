@@ -126,24 +126,26 @@ const NavBar = ({ children }: any) => {
               </Link>
             </li>
           </div>
-          {/* {sideBarData.map((item, index) => {
-            return (
-              <li
-                key={index}
-                style={{ display: "flex", cursor: "pointer" }}
-                onClick={showSidebar}
-              >
-                <FontAwesomeIcon
-                  icon={item.icon}
-                  color="black"
-                  style={{ fontSize: "1em", alignSelf: "center" }}
-                />
-                <Link href={item.path}>
-                  <p style={{ fontSize: "1em" }}>{item.title}</p>
-                </Link>
-              </li>
-            );
-          })} */}
+          <Link href="/api/auth/logout">
+            <button
+              style={{
+                border: "none",
+                width: "80%",
+                height: "50px",
+                borderRadius: "15px",
+                backgroundColor: "pink",
+                position: "absolute",
+                bottom: "20px",
+                marginLeft: "auto",
+                marginRight: "auto",
+                left: 0,
+                right: 0,
+              }}
+              onClick={showSidebar}
+            >
+              Log out
+            </button>
+          </Link>
         </div>
       ) : (
         <div style={{ width: "100%" }}>
