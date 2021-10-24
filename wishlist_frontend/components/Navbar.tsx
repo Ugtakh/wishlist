@@ -27,7 +27,7 @@ const sideBarData = [
   },
 ];
 
-const NavBar = () => {
+const NavBar = ({ children }: any) => {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
 
@@ -37,9 +37,11 @@ const NavBar = () => {
         <div
           className="nav-bar"
           style={{
-            width: "60%",
+            width: "100%",
             height: "100vh",
             background: "rgb(255, 249, 249)",
+            paddingLeft: "15px",
+            paddingRight: "15px",
           }}
         >
           <div
@@ -53,7 +55,7 @@ const NavBar = () => {
               icon={faTimes}
               color="black"
               onClick={showSidebar}
-              style={{ fontSize: "1.5em" }}
+              style={{ fontSize: "1.5em", marginTop: "10px" }}
             />
           </div>
 
@@ -61,7 +63,6 @@ const NavBar = () => {
             className="nav-profile"
             style={{
               display: "flex",
-              //   justifyContent: "center",
               alignItems: "center",
             }}
           >
@@ -81,10 +82,69 @@ const NavBar = () => {
               />
             </Link>
             <Link href="/profile">
-              <p onClick={showSidebar}>User name </p>
+              <p onClick={showSidebar} style={{ paddingLeft: "15px" }}>
+                User name{" "}
+              </p>
             </Link>
           </div>
-          {sideBarData.map((item, index) => {
+          <div
+            className="create-monita-button"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              paddingTop: "15px",
+            }}
+          >
+            <Link href="/create-monita">
+              <button
+                style={{
+                  border: "none",
+                  width: "80%",
+                  height: "50px",
+                  borderRadius: "15px",
+                  backgroundColor: "#E94057",
+                }}
+                onClick={showSidebar}
+              >
+                Create Group
+                <FontAwesomeIcon
+                  icon={faPlus}
+                  color="black"
+                  style={{
+                    fontSize: "1em",
+                    alignSelf: "center",
+                    marginLeft: "8px",
+                  }}
+                />
+              </button>
+            </Link>
+          </div>
+          <div
+            className="sidebar-groups-container"
+            style={{ marginTop: "15px" }}
+          >
+            <p style={{ color: "rgba(0, 0, 0, 0.59)" }}>Groups</p>
+            <li
+              style={{
+                display: "flex",
+                cursor: "pointer",
+                paddingLeft: "15px",
+              }}
+              onClick={showSidebar}
+            >
+              <FontAwesomeIcon
+                icon={faGift}
+                color="black"
+                style={{ fontSize: "1em", alignSelf: "center" }}
+              />
+              <Link href="/monita-groups">
+                <p style={{ fontSize: "1em", paddingLeft: "8px" }}>
+                  Monita Group 1
+                </p>
+              </Link>
+            </li>
+          </div>
+          {/* {sideBarData.map((item, index) => {
             return (
               <li
                 key={index}
@@ -101,15 +161,18 @@ const NavBar = () => {
                 </Link>
               </li>
             );
-          })}
+          })} */}
         </div>
       ) : (
-        <FontAwesomeIcon
-          icon={faBars}
-          color="black"
-          onClick={showSidebar}
-          style={{ fontSize: "1.5em" }}
-        />
+        <div style={{ width: "100%" }}>
+          <FontAwesomeIcon
+            icon={faBars}
+            color="black"
+            onClick={showSidebar}
+            style={{ fontSize: "1.5em" }}
+          />
+          {children}
+        </div>
       )}
     </div>
   );
