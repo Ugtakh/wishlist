@@ -12,24 +12,6 @@ import { Navigation } from "react-minimal-side-navigation";
 import type { NextPage } from "next";
 import Link from "next/link";
 
-const sideBarData = [
-  {
-    title: "Home",
-    path: "/home",
-    icon: faHome,
-  },
-  {
-    title: "Create  group",
-    path: "/create-monita",
-    icon: faPlus,
-  },
-  {
-    title: "Monita Group1",
-    path: "/monita-groups",
-    icon: faGift,
-  },
-];
-
 const Home = () => {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);

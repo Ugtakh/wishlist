@@ -9,24 +9,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
-const sideBarData = [
-  {
-    title: "Home",
-    path: "/",
-    icon: faHome,
-  },
-  {
-    title: "Create  group",
-    path: "/create-monita",
-    icon: faPlus,
-  },
-  {
-    title: "Monita Group1",
-    path: "/monita-groups",
-    icon: faGift,
-  },
-];
-
 const NavBar = ({ children }: any) => {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);

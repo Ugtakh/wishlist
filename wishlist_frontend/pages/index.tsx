@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +15,8 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>WishList Web Application - 2</h1>
+        <Link href="/api/auth/login">Login</Link>
+        <Link href="/api/auth/logout">Logout</Link>
       </main>
       <footer className={styles.footer}>Powered by Wish Team</footer>
     </div>
