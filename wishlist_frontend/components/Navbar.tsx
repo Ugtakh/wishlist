@@ -148,13 +148,21 @@ const NavBar = ({ children }: any) => {
           </Link>
         </div>
       ) : (
-        <div style={{ width: "100%" }}>
+        <div
+          style={{
+            width: "100%",
+            marginTop: "10px",
+            marginLeft: "10px",
+            position: "absolute",
+          }}
+        >
           <FontAwesomeIcon
             icon={faBars}
             color="black"
             onClick={showSidebar}
             style={{ fontSize: "1.5em" }}
           />
+
           {children}
         </div>
       )}
