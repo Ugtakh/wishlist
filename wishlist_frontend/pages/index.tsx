@@ -13,6 +13,7 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmGKNpbNOAwxlmucC267OjGX9A-tM6uKvzQ&usqp=CAU" />
         <h1 className={styles.title}>WishList Web Application </h1>
         <Link href="/api/auth/login">
           <button
